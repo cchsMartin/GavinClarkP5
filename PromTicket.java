@@ -1,11 +1,13 @@
 import java.util.Random;
 
 public class PromTicket {
-	
+
+	//it is standard to name variables using lowercase letters and capitalizing the every word after the first, l
 public String Grade, ConfirmNum, NameFirst, NameLast, TicketType;
 public int Price;
 
 public PromTicket(String firstName, String lastName, String grade, int people) {
+	
 	NameFirst = firstName;
 	NameLast = lastName;
 	Grade = grade;
@@ -21,10 +23,12 @@ public PromTicket(String firstName, String lastName, String grade, int people) {
 	if(people==1) {
 	TicketType = "solo";
 	}
-
+	
+	//constructors don't have return statements. take those out.
 		if(Grade.toLowerCase().startsWith("s")&&Grade.toLowerCase().endsWith("r")&&TicketType=="solo") {
 			Price = 40;
 			return;
+			
 		}
 		if(Grade.toLowerCase().startsWith("s")&&Grade.toLowerCase().endsWith("r")&&TicketType=="couple") {
 			Price = 60;
